@@ -1,0 +1,34 @@
+/***************TAGS SELECTORS*************/
+
+body {
+    background-color: #D6E4E5;
+}
+
+hr {
+    border-style:none;
+    border-top-style:dotted;
+    border-width:8px;
+    border-color: grey;
+    width: 5%;
+}
+
+h1{
+    color: #66BFBF;
+}
+
+h3 {
+    color: #66BFBF;
+}
+
+/***************CLASS SELECTORS*************/
+
+.heading {
+    font-style: italic;
+}
+
+/***************ID SELECTORS*************/
+
+#profilePic {
+    width:150px;
+    border-radius: 100%;
+}
