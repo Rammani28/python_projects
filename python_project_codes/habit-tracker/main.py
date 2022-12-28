@@ -2,7 +2,7 @@ import requests
 import datetime
 
 USERNAME = "rammani"
-TOKEN = "jfdie33l4cmr38jfnvd83kdf"
+TOKEN = os.environ.get("TOKEN")
 API_ENDPOINT = "https://pixe.la/v1/users"
 
 user_params = {
