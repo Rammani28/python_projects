@@ -1,11 +1,12 @@
 import requests
 import datetime
+import os
 
 STOCK = "TSLA"
 COMPANY_NAME = "Tesla Inc"
 
 STOCK_ENDPOINT = "https://www.alphavantage.co/query"
-STOCK_API_KEY = "C8VY8TMS24PWPGGX"
+STOCK_API_KEY = os.environ.get("STOCK_API_KEY")
 stock_params = {
     "function": "TIME_SERIES_DAILY",
     "symbol": STOCK,
@@ -13,7 +14,7 @@ stock_params = {
 }
 
 NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
-NEWS_API_KEY = "9c5916608d6247558298f6ead7e6c9c0"
+NEWS_API_KEY = os.environ.get("NEWS_API_KEY")
 
 response = requests.get(STOCK_ENDPOINT, params=stock_params)
 response.raise_for_status()
