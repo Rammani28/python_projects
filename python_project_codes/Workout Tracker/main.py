@@ -4,13 +4,13 @@ import datetime
 SHEET_ENDPOINT = "https://api.sheety.co/20272124109ec9d57ad70fc8eb07bbd3/workoutTracking/workouts"
 TRACKAPI_ENDPOINT = "https://trackapi.nutritionix.com/v2/natural/exercise"
 HEADERS = {
-    "Authorization": "Basic a3RtY29kZWJyZXdlcnk6YWtsdWU4M254ZDNhamxh"
+    "Authorization": os.environ.get("AUTHORIZATION")
 }
 
 
 def get_calorie_info():
     app_id = "e80a52e5"
-    api_key = "7eb6dab24ad2aa8c660d0a18055e30d5"
+    api_key = os.environ.get("API_KEY")
 
     query = input("Tell me which exercise you did: ")
     json = {
