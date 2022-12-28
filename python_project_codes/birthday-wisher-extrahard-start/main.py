@@ -4,10 +4,11 @@ import datetime as dt
 import pandas
 import random
 import smtplib
+import os
 
 SENDER = 'Rammani'
 MY_EMAIL = 'ktmcodebrewery@gmail.com'
-APP_PASSWORD = 'jcfboqrovkuvezdu'
+APP_PASSWORD = os.environ.get("APP_PASSWORD")
 
 now = dt.datetime.now()
 file = pandas.read_csv('birthdays.csv')
